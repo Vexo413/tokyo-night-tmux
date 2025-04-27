@@ -1,34 +1,33 @@
-# vim:set ft=tmux:
+# Tokyo Night tmux theme with rounded items for status line
 
-# --> Catppuccin (Mocha)
-set -ogq @thm_bg "#1e1e2e"
-set -ogq @thm_fg "#cdd6f4"
+# Set the background color to dark mode for Tokyo Night
+set -g @tokyo-night-background 'dark'
 
-# Colors
-set -ogq @thm_rosewater "#f5e0dc"
-set -ogq @thm_flamingo "#f2cdcd"
-set -ogq @thm_rosewater "#f5e0dc"
-set -ogq @thm_pink "#f5c2e7"
-set -ogq @thm_mauve "#cba6f7"
-set -ogq @thm_red "#f38ba8"
-set -ogq @thm_maroon "#eba0ac"
-set -ogq @thm_peach "#fab387"
-set -ogq @thm_yellow "#f9e2af"
-set -ogq @thm_green "#a6e3a1"
-set -ogq @thm_teal "#94e2d5"
-set -ogq @thm_sky "#89dceb"
-set -ogq @thm_sapphire "#74c7ec"
-set -ogq @thm_blue "#89b4fa"
-set -ogq @thm_lavender "#b4befe"
+# Set the status bar background and foreground colors
+set -g status-bg '#1a1b26'  # Dark background
+set -g status-fg '#c0caf5'  # Light text for status
 
-# Surfaces and overlays
-set -ogq @thm_subtext_1 "#a6adc8"
-set -ogq @thm_subtext_0 "#bac2de"
-set -ogq @thm_overlay_2 "#9399b2"
-set -ogq @thm_overlay_1 "#7f849c"
-set -ogq @thm_overlay_0 "#6c7086"
-set -ogq @thm_surface_2 "#585b70"
-set -ogq @thm_surface_1 "#45475a"
-set -ogq @thm_surface_0 "#313244"
-set -ogq @thm_mantle "#181825"
-set -ogq @thm_crust "#11111b"
+# Set window title, borders, and active window color
+set -g window-status-bg '#24283b'  # Inactive window background
+set -g window-status-fg '#c0caf5'  # Inactive window text color
+set -g window-status-attr 'none'
+
+# Set the active window to stand out
+set -g window-status-current-bg '#7aa2f7'  # Blue
+set -g window-status-current-fg '#1a1b26'  # Dark background for current window
+
+# Round corners for status line and window title bar
+set -g status-left-length 30
+set -g status-right-length 30
+
+# Set the status line separators to rounded corners (using Unicode characters for rounded borders)
+set -g status-left "#[fg=cyan]#[fg=white]#[fg=cyan] Status Left "
+set -g status-right "#[fg=cyan]#[fg=white]#[fg=cyan] Status Right "
+
+# Add padding to status line for aesthetic rounded look
+set -g status-left-style 'bg=#24283b,fg=#c0caf5'
+set -g status-right-style 'bg=#24283b,fg=#c0caf5'
+
+# Optional: Change the cursor color to match the theme
+set -g cursor-bg '#7aa2f7'  # Blue cursor
+set -g cursor-fg '#1a1b26'  # Dark cursor text
