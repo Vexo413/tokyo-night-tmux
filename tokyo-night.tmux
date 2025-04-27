@@ -1,5 +1,3 @@
-# Tokyo Night tmux theme with rounded items for status line
-
 # Set the background color to dark mode for Tokyo Night
 set -g @tokyo-night-background 'dark'
 
